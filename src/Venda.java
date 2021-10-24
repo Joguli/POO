@@ -4,12 +4,16 @@ import java.util.List;
 
 public class Venda {
 
-	private String descriçãoVenda;	
+	private String descricaoVenda;	
 	private String nomeCliente;
 	private String enderecoEntrega;
 	private BigDecimal valorTotal;
 	
 	private List<Produto> listaProduto = new ArrayList<Produto>();
+	
+	public List<Produto> getListaProduto() {
+		return listaProduto;
+	}
 	
 	private long id;
 	public long getId() {
@@ -18,11 +22,11 @@ public class Venda {
 	public void setId(long id) {
 		this.id = id;
 	}
-	public String getDescriçãoVenda() {
-		return descriçãoVenda;
+	public String getDescricaoVenda() {
+		return descricaoVenda;
 	}
-	public void setDescriçãoVenda(String descriçãoVenda) {
-		this.descriçãoVenda = descriçãoVenda;
+	public void setDescriçãoVenda(String descricaoVenda) {
+		this.descricaoVenda = descricaoVenda;
 	}
 	public String getNomeCliente() {
 		return nomeCliente;
@@ -42,5 +46,15 @@ public class Venda {
 	public void setValorTotal(BigDecimal valorTotal) {
 		this.valorTotal = valorTotal;
 	}
+	@Override
+	public String toString() {
+		return "Venda [descricaoVenda=" + descricaoVenda + ", nomeCliente=" + nomeCliente + ", enderecoEntrega="
+				+ enderecoEntrega + ", valorTotal=" + valorTotal + ", listaProduto=" + listaProduto + ", id=" + id
+				+ ", getId()=" + getId() + ", getDescricaoVenda()=" + getDescricaoVenda() + ", getNomeCliente()="
+				+ getNomeCliente() + ", getEnderecoEntrega()=" + getEnderecoEntrega() + ", getValorTotal()="
+				+ getValorTotal() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()="
+				+ super.toString() + "]";
+	}
+	
 	
 }
