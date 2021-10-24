@@ -4,6 +4,7 @@ public class Produto {
 
 	private long id;
 	private String nome;
+	private String categoria;
 	private BigDecimal valorProduto;
 	public long getId() {
 		return id;
