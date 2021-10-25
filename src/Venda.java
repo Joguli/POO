@@ -9,6 +9,14 @@ public class Venda {
 	private String enderecoEntrega;
 	private BigDecimal valorTotal;
 	
+	public double totalVenda() {
+		double total = 0.0;
+		for (Produto produto : listaProduto) {
+			total += produto.getValorProduto().doubleValue();
+		}
+		return total;
+	}
+	
 	private List<Produto> listaProduto = new ArrayList<Produto>();
 	
 	public List<Produto> getListaProduto() {

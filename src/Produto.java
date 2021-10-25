@@ -5,7 +5,8 @@ public class Produto {
 	private long id;
 	private String nome;
 	private String categoria;
-	private BigDecimal valorProduto;
+	private BigDecimal ValorProduto;
+	
 	public long getId() {
 		return id;
 	}
@@ -19,10 +20,18 @@ public class Produto {
 		this.nome = nome;
 	}
 	public BigDecimal getValorProduto() {
-		return valorProduto;
+		return ValorProduto;
 	}
-	public void setValorProduto(BigDecimal valorProduto) {
-		this.valorProduto = valorProduto;
+	public void setValorProduto(BigDecimal ValorProduto) {
+		this.ValorProduto = ValorProduto;
 	}
 	
+	@Override
+	public String toString() {
+		return "Produto [id=" + id + ", nome=" + nome + ", categoria=" + categoria + ", ValorProduto=" + ValorProduto
+				+ ", getId()=" + getId() + ", getNome()=" + getNome() + ", getValorProduto()=" + getValorProduto()
+				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString()
+				+ "]";
+	}
+
 }
